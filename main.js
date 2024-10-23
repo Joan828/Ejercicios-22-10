@@ -116,13 +116,19 @@ const numbersPeers = numbers2.filter(numero => numero%2 == 0)
 console.log(numbersPeers);
 
 // Dado el siguiente array, genera un segundo array que filtre los platos veganos y saque una sentencia como la del ejemplo:
+/* [
+          'Que rico Tempeh me voy a comer!',
+          'Que rica Tofu burguer me voy a comer!'
+         ]
+      */
+
        const foodList = [
         { name: 'Tempeh', isVeggie: true },
         { name: 'Cheesbacon burguer', isVeggie: false },
         { name: 'Tofu burguer', isVeggie: true },
         { name: 'Entrecot', isVeggie: false }
       ];
-const veganFood = foodList.filter(food => food.isVeggie == true)
+const veganFood = foodList.filter(food => food.isVeggie == true).map(plato => `Que rico ${plato.name} me voy a comer!`)
 console.log(veganFood);
 
 // 5. Reduce
